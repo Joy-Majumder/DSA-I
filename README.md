@@ -1,22 +1,47 @@
 # UIU DSA 1 Course
 
-This repository contains code and resources for the Data Structures and Algorithms 1 (DSA 1) course at United International University (UIU).
+This repository contains C++ practice code and reference material for the Data Structures and Algorithms 1 (DSA 1) course at United International University (UIU).
 
-## Contents
+## Repository Structure
 
-- **Sorting/**: Implementations of classic sorting algorithms in C++
-	- `BubbleSort.cpp`: Bubble Sort algorithm
-	- `selectionSort.cpp`: Selection Sort algorithm
-- **Book/**: (Reserved for course notes, references, or e-books)
+### `Searching/`
+
+- `LinearSearch.cpp` - linear search implementation
+
+### `Sorting/`
+
+- `BubleSort.cpp` - bubble sort implementation
+- `insertionSort.cpp` - insertion sort implementation
+- `selectionSort.cpp` - selection sort implementation
+
+### `Book/`
+
+- `Cormen Introduction to Algorithms.pdf` - reference book material
+
+## How To Run
+
+Compile any source file with `g++`, then run the generated program.
+
+```bash
+g++ Searching/LinearSearch.cpp -o linear-search
+./linear-search
+```
+
+Example for a sorting file:
+
+```bash
+g++ Sorting/insertionSort.cpp -o insertion-sort
+./insertion-sort
+```
 
 ## Purpose
 
-This repository is intended to help UIU students understand and practice fundamental data structures and algorithms, starting with basic sorting techniques. More algorithms and data structures will be added as the course progresses.
+The goal of this repository is to collect basic algorithm implementations, practice problems, and study resources for DSA 1. It currently focuses on introductory searching and sorting topics.
 
 ## Contribution
 
-Feel free to contribute by adding new algorithms, improving code, or updating documentation. Pull requests are welcome!
+You can extend this repository by adding more algorithms, improving code quality, or updating the documentation.
 
 ## License
 
-This project is for educational purposes only.
+This repository is intended for educational use.
