@@ -1,42 +1,26 @@
-# UIU DSA 1 Course
+# DSA 1 Study & Reference
 
-This repository contains C++ practice code and reference material for the Data Structures and Algorithms 1 (DSA 1) course at United International University (UIU).
+This repository is for studying Data Structures and Algorithms 1 (DSA 1). It contains C++ code examples and reference materials for learning and revision.
 
-## Repository Structure
+## Folders & Contents
 
-### `Searching/`
+### Searching
+- `LinearSearch.cpp` — Linear search example
 
-- `LinearSearch.cpp` - linear search implementation
+### Sorting
+- `BubleSort.cpp` — Bubble sort example
+- `insertionSort.cpp` — Insertion sort example
+- `selectionSort.cpp` — Selection sort example
 
-### `Sorting/`
+### Linked List
+- `CreateNode.cpp` — Linked list node creation and basic operations
 
-- `BubleSort.cpp` - bubble sort implementation
-- `insertionSort.cpp` - insertion sort implementation
-- `selectionSort.cpp` - selection sort implementation
+### Book
+- `Cormen Introduction to Algorithms.pdf` — Reference book
 
-### `Book/`
+---
 
-- `Cormen Introduction to Algorithms.pdf` - reference book material
-
-## How To Run
-
-Compile any source file with `g++`, then run the generated program.
-
-```bash
-g++ Searching/LinearSearch.cpp -o linear-search
-./linear-search
-```
-
-Example for a sorting file:
-
-```bash
-g++ Sorting/insertionSort.cpp -o insertion-sort
-./insertion-sort
-```
-
-## Purpose
-
-The goal of this repository is to collect basic algorithm implementations, practice problems, and study resources for DSA 1. It currently focuses on introductory searching and sorting topics.
+Use this repository to review code, understand algorithms, and prepare for exams. No extra instructions or setup details are included—focus is on study and reference only.
 
 ## Contribution
 
