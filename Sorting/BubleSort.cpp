@@ -1,33 +1,33 @@
 #include <iostream>
+#include <utility>
 using namespace std;
 
+void BubbleSort(int arr[], int n) {
+  // Bublle Sort time complexity is : 0(n^2)
+  bool isSwapped = false;
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr[j], arr[j + 1]);
+        isSwapped = true;
+      }
+    }
+    if (!isSwapped) { // array is already sorted
+      break;
+    }
+  }
+}
+
+void PrintArray(int arr[], int n) {
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
 int main() {
-    int n;
-    cin>>n;
-    int arr[n+1];
-    for(int i = 0; i<n;i++){
-        cin>>arr[i];
-    }
-    // starting bubble sorting from here also this is the best efficient way of bubble sort!
-    for(int i=0;i<n-1;i++){ // for iteration
-        int flag = 0; // this is the another way of get that arr is swapped or not! if it got swapped then it will print 1 otherwise it will print 0 it means its not swapped!
-        for(int j=0;i<n-1-i;j++){ // here we used i for time complex
-
-                if(arr[j]>arr[j]){
-                    //swap(arr[j],arr[j+1]);
-                    //we can do it in traditional way
-                    int temp = arr[j];
-                    arr[j]= arr[j+1];
-                    arr[j+1]=temp;
-                    flag = 1;
-
-                }
-        }
-        if(flag==0){
-            break;
-        }
-    }
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
+  int n = 5;
+  int arr[] = {4, 1, 5, 2, 3};
+  BubbleSort(arr, n);
+  PrintArray(arr, n);
 }

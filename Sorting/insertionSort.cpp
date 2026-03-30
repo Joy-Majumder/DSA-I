@@ -1,23 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main()
-{
-    int n;
-    cin>>n;
-    int ar[n+1];
-    for(int i=0;i<n;i++)
-        cin>>ar[i];
-    for(int i=1;i<n;i++)
-    {
-        int item=ar[i];
-        int j=i-1;
-        while(j>=0 && ar[j]>item)
-        {
-            ar[j+1]=ar[j];
-            j--;
-        }
-        ar[j+1]=item;
+
+void InsertionSort(int arr[], int n) {
+
+  for (int i = 0; i < n; i++) {
+    int CurrentValue = arr[i];
+    int previous = i - 1;
+    while (previous >= 0 && arr[previous] > CurrentValue) {
+      arr[previous + 1] = arr[previous];
+      previous--;
     }
-    for(int i=0;i<n;i++)
-        cout<<ar[i]<<" ";
+    arr[previous + 1] =
+        CurrentValue; // placing the current element in its correct position
+  }
+}
+
+void PrintArray(int arr[], int n) {
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << endl;
+    ;
+  }
+  // cout << endl;
+}
+
+int main() {
+  int n = 5;
+  int arr[] = {4, 2, 1, 7, 9};
+
+  InsertionSort(arr, n);
+  PrintArray(arr, n);
 }
