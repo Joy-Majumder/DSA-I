@@ -4,7 +4,11 @@ using namespace std;
 int binarySearch(int arr[], int size, int key) {
   int start = 0;
   int end = size - 1;
-  int mid = (start + end) / 2;
+  int mid = start + (end - start) / 2;
+  // we cant use this formula for Optimisation because if we use long values of
+  // both start and end then it will be very tough to handle (start + end) / 2;
+  // so we can use this formula instead: "start + (end - start)/2"
+  // so here we can do minus from big to big numbers
 
   while (start <= end) {
     if (arr[mid] == key) {
@@ -16,10 +20,10 @@ int binarySearch(int arr[], int size, int key) {
     //
     if (key > arr[mid]) {
       start = mid + 1;
-    } else {
+    } else { // key < arr[mid]
       end = mid - 1;
     }
-    mid = (start + end) / 2;
+    mid = start + (end - start) / 2;
   }
 
   return -1; // here -1 means that it isnt found(Not found);
