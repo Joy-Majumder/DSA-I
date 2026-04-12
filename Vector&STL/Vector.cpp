@@ -33,5 +33,20 @@ int main(void){
         cout<<"Value are : "<<val<<endl;
     } // prints 69 and 96 because in the beginning we used a vector function named pop back that actually removed the last elemnt thats why here prints only 69 and 96
 
+    // Static and dynamic Allocation
+    // here static -> runs in compile time also it stores data in stack eg: int arr[0]
+    // this is static version and its size is always fixed;
+    // and dynamic version runs at runtime also we can do rexsize ot it and it stores data
+    // at Heap
+    vector<int>a;
+    a.push_back(0);
+    a.push_back(1);
+    a.push_back(2);
+    a.push_back(3);
+    a.push_back(5); // added this later 
+    cout<<"Size : "<<a.size()<<endl; // its size is 3 after adding 3,5 its size is 5 
+    cout<<"Capacity : "<<a.capacity()<<endl; // its capacity is 4 after adding 3,5 it just multiply its 
+                              // capacity : 4*2=8 so now its capacity is 8
+
     
 }
