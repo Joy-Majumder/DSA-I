@@ -7,7 +7,6 @@ using namespace std;
 
 struct Point { int r, c; };
 
-// Custom comparator for using Point as key in std::map
 bool operator<(const Point& a, const Point& b) {
     if (a.r != b.r) return a.r < b.r;
     return a.c < b.c;
@@ -52,7 +51,6 @@ void findTreasure(vector<vector<int>>& maze) {
 
     if (treasure.r == -1) return;
 
-    // Build the path back
     vector<Point> path;
     for (Point p = treasure; p.r != -1; p = parent[p]) {
         path.push_back(p);

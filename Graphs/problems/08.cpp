@@ -3,7 +3,6 @@
 #include <string>
 using namespace std;
 
-// 8 directions (row shifts, col shifts)
 int dRow[] = {-1, 1, 0, 0, -1, -1, 1, 1};
 int dCol[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
