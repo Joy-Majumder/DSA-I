@@ -12,7 +12,7 @@ public:
         l = new list<int>[V];
     }
     void addEdge(int u, int v) {
-        l[u].push_back(v); // One-way direction!
+        l[u].push_back(v); 
     }
 
     bool dfsCycleCheck(int u, vector<bool>& vis, vector<bool>& stackVis) {
@@ -23,11 +23,11 @@ public:
             if (!vis[v]) {
                 if (dfsCycleCheck(v, vis, stackVis)) return true;
             } else if (stackVis[v]) {
-                return true; // Met an ancestor still in execution stack -> Cycle found!
+                return true;
             }
         }
 
-        stackVis[u] = false; // Backtrack step
+        stackVis[u] = false; 
         return false;
     }
 

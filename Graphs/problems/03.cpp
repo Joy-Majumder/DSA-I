@@ -39,8 +39,7 @@ public:
             }
         }
 
-        // Print shortest path from src to the furthest node (or a specific target)
-        // Reconstructing path for Node 3 as requested by sample output
+        
         int target = 3; 
         vector<int> path;
         for (int v = target; v != -1; v = parent[v]) {

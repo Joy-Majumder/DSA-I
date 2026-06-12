@@ -3,15 +3,14 @@
 using namespace std;
 
 void dfsMatrix(int r, int c, vector<vector<int>>& grid) {
+
     int rows = grid.size();
     int cols = grid[0].size();
 
-    // Base boundary checks and checking if it's water (0)
     if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] == 0) return;
 
-    grid[r][c] = 0; // Mark as visited by sinking the land
+    grid[r][c] = 0;
 
-    // 4 Directional Moves
     dfsMatrix(r + 1, c, grid);
     dfsMatrix(r - 1, c, grid);
     dfsMatrix(r, c + 1, grid);
@@ -25,7 +24,7 @@ int numIslands(vector<vector<int>>& grid) {
         for (size_t c = 0; c < grid[0].size(); c++) {
             if (grid[r][c] == 1) {
                 islands++;
-                dfsMatrix(r, c, grid); // Sink the connected island
+                dfsMatrix(r, c, grid);
             }
         }
     }

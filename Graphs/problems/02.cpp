@@ -28,7 +28,9 @@ public:
         dfsHelper(0, vis); // Start from node 0
 
         for (bool visited : vis) {
-            if (!visited) return false; // If any node is unvisited, it's disconnected
+            if (!visited){
+                 return false;
+                } // If any node is unvisited, it's disconnected
         }
         return true;
     }

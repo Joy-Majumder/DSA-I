@@ -16,13 +16,13 @@ bool dfsWord(int r, int c, int index, vector<vector<char>>& grid, string& word) 
     if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] != word[index]) return false;
 
     char temp = grid[r][c];
-    grid[r][c] = '*'; // Mark visited temporarily
+    grid[r][c] = '*';
 
     for (int i = 0; i < 8; i++) {
         if (dfsWord(r + dRow[i], c + dCol[i], index + 1, grid, word)) return true;
     }
 
-    grid[r][c] = temp; // Backtrack
+    grid[r][c] = temp; 
     return false;
 }
 

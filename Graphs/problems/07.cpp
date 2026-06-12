@@ -21,7 +21,7 @@ public:
         for (int v : l[u]) {
             if (!vis[v]) topoDFS(v, vis, st);
         }
-        st.push(u); // Push to stack when processing finishes
+        st.push(u); 
     }
 
     void topologicalSort() {
